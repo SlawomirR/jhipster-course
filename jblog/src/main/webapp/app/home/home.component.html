@@ -22,11 +22,8 @@
                 <a class="alert-link" routerLink="register" jhiTranslate="global.messages.info.register.link">Register a
                     new account</a>
             </div>
-            <!--         </div>
-                    Slawek
-                    <div [ngSwitch]="isAuthenticated()"> -->
-            <div class="table-responsive" *ngIf="posts">
-                <table class="table table-striped" *ngSwitchCase="true">
+            <div class="table-responsive" *ngSwitchCase="true">
+                <table class="table table-striped" *ngIf="posts">
                     <thead>
                     <tr>
                         <th><span jhiTranslate="global.field.id">ID</span></th>
@@ -40,9 +37,6 @@
                     <tr *ngFor="let post of posts ;trackBy: trackId">
                         <td><a [routerLink]="['/post', post.id, 'view' ]">{{post.id}}</a></td>
                         <td>{{post.title}}</td>
-                        <!--
-                                        <td>{{post.body}}</td>
-                        -->
                         <td [innerHTML]="post.body"></td>
                         <td>{{post.author}}</td>
                         <td class="text-right">
@@ -74,8 +68,6 @@
                 </table>
             </div>
         </div>
-        <!-- Slawek -->
-
         <p jhiTranslate="home.question">
             If you have any question on JHipster:
         </p>

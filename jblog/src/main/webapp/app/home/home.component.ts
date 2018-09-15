@@ -12,9 +12,9 @@ import { Account, LoginModalService, Principal } from 'app/core';
     styleUrls: ['home.css']
 })
 export class HomeComponent implements OnInit {
+    posts: Post[] = [];
     account: Account;
     modalRef: NgbModalRef;
-    posts: Post[] = [];
 
     constructor(
         private principal: Principal,
@@ -25,17 +25,17 @@ export class HomeComponent implements OnInit {
     ) {}
 
     ngOnInit() {
+        this.loadAll();
         this.principal.identity().then(account => {
             this.account = account;
         });
         this.registerAuthenticationSuccess();
-        this.loadAll();
     }
 
     loadAll() {
         this.postService.query().subscribe(
             (res: HttpResponse<Post[]>) => {
-                console.log(res);
+                console.log(res.body);
                 this.posts = res.body;
             },
             (posts: HttpErrorResponse) => this.onError(posts.message)
