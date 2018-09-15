@@ -1,0 +1,24 @@
+{
+    "jBlogApp": {
+        "post": {
+            "home": {
+                "title": "Posts",
+                "createLabel": "Dodaj Post",
+                "createOrEditLabel": "Dodaj lub edytuj: Post",
+                "search": "Szukaj Post"
+            },
+            "created": "Utworzono nowy Post z identyfikatorem {{ param }}",
+            "updated": "Uaktualniono Post z identyfikatorem {{ param }}",
+            "deleted": "Usunięto Post z identyfikatorem {{ param }}",
+            "delete": {
+                "question": "Czy na pewno chcesz usunąć Post {{ id }}?"
+            },
+            "detail": {
+                "title": "Post"
+            },
+            "title": "Title",
+            "body": "Body",
+            "author": "Author"
+        }
+    }
+}

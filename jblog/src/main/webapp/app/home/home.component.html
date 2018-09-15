@@ -1,0 +1,102 @@
+<div class="row">
+    <div class="col-md-3">
+        <span class="hipster img-fluid rounded"></span>
+    </div>
+    <div class="col-md-9">
+        <h1 class="display-4" jhiTranslate="home.title">Welcome, Java Hipster!</h1>
+        <p class="lead" jhiTranslate="home.subtitle">This is your homepage</p>
+
+        <div [ngSwitch]="isAuthenticated()">
+            <div class="alert alert-success" *ngSwitchCase="true">
+                <span id="home-logged-message" *ngIf="account" jhiTranslate="home.logged.message"
+                      translateValues="{username: '{{account.login}}'}"> You are logged in as user "{{account.login}}". </span>
+            </div>
+
+            <div class="alert alert-warning" *ngSwitchCase="false">
+                <span jhiTranslate="global.messages.info.authenticated.prefix">If you want to </span>
+                <a class="alert-link" (click)="login()" jhiTranslate="global.messages.info.authenticated.link">sign
+                    in</a><span jhiTranslate="global.messages.info.authenticated.suffix">, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").</span>
+            </div>
+            <div class="alert alert-warning" *ngSwitchCase="false">
+                <span jhiTranslate="global.messages.info.register.noaccount">You don't have an account yet?</span>&nbsp;
+                <a class="alert-link" routerLink="register" jhiTranslate="global.messages.info.register.link">Register a
+                    new account</a>
+            </div>
+            <!--         </div>
+                    Slawek
+                    <div [ngSwitch]="isAuthenticated()"> -->
+            <div class="table-responsive" *ngIf="posts">
+                <table class="table table-striped" *ngSwitchCase="true">
+                    <thead>
+                    <tr>
+                        <th><span jhiTranslate="global.field.id">ID</span></th>
+                        <th><span jhiTranslate="jBlogApp.post.title">Title</span></th>
+                        <th><span jhiTranslate="jBlogApp.post.body">Body</span></th>
+                        <th><span jhiTranslate="jBlogApp.post.author">Author</span></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let post of posts ;trackBy: trackId">
+                        <td><a [routerLink]="['/post', post.id, 'view' ]">{{post.id}}</a></td>
+                        <td>{{post.title}}</td>
+                        <!--
+                                        <td>{{post.body}}</td>
+                        -->
+                        <td [innerHTML]="post.body"></td>
+                        <td>{{post.author}}</td>
+                        <td class="text-right">
+                            <div class="btn-group flex-btn-group-container">
+                                <button type="submit"
+                                        [routerLink]="['/post', post.id, 'view' ]"
+                                        class="btn btn-info btn-sm">
+                                    <fa-icon [icon]="'eye'"></fa-icon>
+                                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                                </button>
+                                <button type="submit"
+                                        [routerLink]="['/post', post.id, 'edit']"
+                                        class="btn btn-primary btn-sm">
+                                    <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                                </button>
+                                <button type="submit"
+                                        [routerLink]="['/', { outlets: { popup: 'post/'+ post.id + '/delete'} }]"
+                                        replaceUrl="true"
+                                        queryParamsHandling="merge"
+                                        class="btn btn-danger btn-sm">
+                                    <fa-icon [icon]="'times'"></fa-icon>
+                                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Slawek -->
+
+        <p jhiTranslate="home.question">
+            If you have any question on JHipster:
+        </p>
+
+        <ul>
+            <li><a href="https://www.jhipster.tech/" target="_blank" rel="noopener" jhiTranslate="home.link.homepage">JHipster
+                homepage</a></li>
+            <li><a href="http://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener"
+                   jhiTranslate="home.link.stackoverflow">JHipster on Stack Overflow</a></li>
+            <li><a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank"
+                   rel="noopener" jhiTranslate="home.link.bugtracker">JHipster bug tracker</a></li>
+            <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener"
+                   jhiTranslate="home.link.chat">JHipster public chat room</a></li>
+            <li><a href="https://twitter.com/java_hipster" target="_blank" rel="noopener"
+                   jhiTranslate="home.link.follow">follow @java_hipster on Twitter</a></li>
+        </ul>
+
+        <p>
+            <span jhiTranslate="home.like">If you like JHipster, don't forget to give us a star on</span> <a
+            href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener"
+            jhiTranslate="home.github">GitHub</a>!
+        </p>
+    </div>
+</div>

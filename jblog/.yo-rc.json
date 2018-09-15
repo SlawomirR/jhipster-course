@@ -1,0 +1,38 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "io.github.slawomirr",
+            "nativeLanguage": "en"
+        },
+        "jhipsterVersion": "5.3.1",
+        "applicationType": "monolith",
+        "baseName": "JBlog",
+        "packageName": "io.github.slawomirr",
+        "packageFolder": "io/github/slawomirr",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "ehcache",
+        "enableHibernateCache": true,
+        "websocket": false,
+        "databaseType": "sql",
+        "devDatabaseType": "h2Disk",
+        "prodDatabaseType": "mysql",
+        "searchEngine": "elasticsearch",
+        "messageBroker": false,
+        "serviceDiscoveryType": false,
+        "buildTool": "gradle",
+        "enableSwaggerCodegen": false,
+        "jwtSecretKey": "YzM2MzllMTFhNGRhMDAxZDYzNDBjN2VjYjQ2MWRkZjk1MDdjOWMzMzhhMTM3ZDhjYTkxYTdhYzI0NzJkMDkxY2YyNDVlYzA3YmFlM2VhZTRhZjE2NjM2YWIxOTFjNWY0MWY3ZjgwYjk2YWY3MjRlYjllNmQwYmVhMDAwMTIyOWM=",
+        "clientFramework": "angularX",
+        "useSass": false,
+        "clientPackageManager": "npm",
+        "testFrameworks": [],
+        "jhiPrefix": "jhi",
+        "enableTranslation": true,
+        "nativeLanguage": "en",
+        "languages": [
+            "en",
+            "pl"
+        ]
+    }
+}
