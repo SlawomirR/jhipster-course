@@ -1,0 +1,26 @@
+
+{
+    "gatewayApp": {
+        "session" : {
+            "home": {
+                "title": "Sessions",
+                "createLabel": "Create a new Session",
+                "createOrEditLabel": "Create or edit a Session"
+            },
+            "created": "A new Session is created with identifier {{ param }}",
+            "updated": "A Session is updated with identifier {{ param }}",
+            "deleted": "A Session is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Session {{ id }}?"
+            },
+            "detail": {
+                "title": "Session"
+            },
+            "title": "Title",
+            "description": "Description",
+            "startDateTime": "Start Date Time",
+            "endDateTime": "End Date Time",
+            "speakers": "Speakers"
+        }
+    }
+}

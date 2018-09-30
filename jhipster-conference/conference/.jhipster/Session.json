@@ -1,0 +1,52 @@
+{
+    "name": "Session",
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "startDateTime",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "endDateTime",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "speakers",
+            "otherEntityName": "speaker",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "sessions"
+        }
+    ],
+    "changelogDate": "20180930200213",
+    "entityTableName": "session",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "conference",
+    "applications": "*",
+    "microserviceName": "conference"
+}
