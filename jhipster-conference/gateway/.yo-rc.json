@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "io.github.slawomirr",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "5.3.1",
+    "applicationType": "gateway",
+    "baseName": "gateway",
+    "packageName": "io.github.slawomirr",
+    "packageFolder": "io/github/slawomirr",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZWRmY2QzZTM4OTRiOGZiNWFiZWZkMjZmMWVkMjczNWVkYTBhOGFmODA5YmYwNDk3ODAyMDMyMzYyY2MyNmQ0NmJiMmJmZjRlOGYxY2U2NzU4MDQ4YTYzZDMyMDBmZjI2ODYwNzRlY2E3MGIyZTJiMTNhZDFkNWQ5MjQ0MzhmYzI=",
+    "clientFramework": "angularX",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [
+      "gatling",
+      "cucumber",
+      "protractor"
+    ],
+    "jhiPrefix": "jhi",
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "pl"
+    ]
+  }
+}
