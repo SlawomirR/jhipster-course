@@ -9,7 +9,7 @@
     "baseName": "conference",
     "packageName": "io.github.slawomirr",
     "packageFolder": "io/github/slawomirr",
-    "serverPort": "8081",
+    "serverPort": "8082",
     "authenticationType": "jwt",
     "cacheProvider": "hazelcast",
     "enableHibernateCache": true,

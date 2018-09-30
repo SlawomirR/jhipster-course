@@ -89,7 +89,7 @@ spring:
 # at chrome://flags/#allow-insecure-localhost
 # ===================================================================
 server:
-    port: 8081
+    port: 8082
 #    ssl:
 #        key-store: classpath:config/tls/keystore.p12
 #        key-store-password: password
@@ -132,7 +132,7 @@ jhipster:
                 token-validity-in-seconds-for-remember-me: 2592000
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: conference@localhost
-        base-url: http://127.0.0.1:8081
+        base-url: http://127.0.0.1:8082
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx:
             enabled: true
