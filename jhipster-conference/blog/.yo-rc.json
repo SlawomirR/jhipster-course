@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "io.github.slawomirr",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "5.3.1",
+    "applicationType": "microservice",
+    "baseName": "blog",
+    "packageName": "io.github.slawomirr",
+    "packageFolder": "io/github/slawomirr",
+    "serverPort": "8083",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "M2QyZGMwZWI5ZDY1YWI4YmU4OWNiMDhmNmEyNTY5MzU0ZGNmYTQ1ZTliMzY1YjQ2NjhiNTMxYWM1ZTIwYjgyZTQyYTgwM2FkNjMzZDc2NzIyNjBmM2EwYmU2OTYxMjczNjNhYWEzMmE1ODMwOTk4YzE1OGM3YmNhOGUwMzU4Y2I=",
+    "enableTranslation": true,
+    "testFrameworks": [
+      "gatling",
+      "cucumber"
+    ],
+    "jhiPrefix": "jhi",
+    "clientPackageManager": "npm",
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "pl"
+    ],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
