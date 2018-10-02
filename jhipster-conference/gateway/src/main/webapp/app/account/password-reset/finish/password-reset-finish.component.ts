@@ -1,9 +1,9 @@
-import { AfterViewInit, Component, ElementRef, OnInit, Renderer } from '@angular/core';
-import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { ActivatedRoute } from '@angular/router';
+import {AfterViewInit, Component, ElementRef, OnInit, Renderer} from '@angular/core';
+import {NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
+import {ActivatedRoute} from '@angular/router';
 
-import { LoginModalService } from 'app/core';
-import { PasswordResetFinishService } from './password-reset-finish.service';
+import {LoginModalService} from 'app/core';
+import {PasswordResetFinishService} from './password-reset-finish.service';
 
 @Component({
     selector: 'jhi-password-reset-finish',

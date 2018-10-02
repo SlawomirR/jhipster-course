@@ -1,7 +1,8 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 
-import { GatewaySpeakerModule } from './speaker/speaker.module';
-import { GatewaySessionModule } from './session/session.module';
+import {GatewaySpeakerModule} from './speaker/speaker.module';
+import {GatewaySessionModule} from './session/session.module';
+import {GatewayBlogModule as BlogBlogModule} from './blog/blog/blog.module';
 
 /* jhipster-needle-add-entity-module-import - JHipster will add entity modules imports here */
 
@@ -10,6 +11,7 @@ import { GatewaySessionModule } from './session/session.module';
     imports: [
         GatewaySpeakerModule,
         GatewaySessionModule,
+        BlogBlogModule,
         /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],
     declarations: [],

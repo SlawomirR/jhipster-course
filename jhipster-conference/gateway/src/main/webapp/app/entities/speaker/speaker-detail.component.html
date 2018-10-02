@@ -1,31 +1,31 @@
 <div class="row justify-content-center">
     <div class="col-8">
         <div *ngIf="speaker">
-            <h2><span jhiTranslate="gatewayApp.speaker.detail.title">Speaker</span> {{speaker.id}}</h2>
+            <h2><span>Speaker</span> {{speaker.id}}</h2>
             <hr>
             <jhi-alert-error></jhi-alert-error>
             <dl class="row-md jh-entity-details">
-                <dt><span jhiTranslate="gatewayApp.speaker.firstName">First Name</span></dt>
+                <dt><span>First Name</span></dt>
                 <dd>
                     <span>{{speaker.firstName}}</span>
                 </dd>
-                <dt><span jhiTranslate="gatewayApp.speaker.lastName">Last Name</span></dt>
+                <dt><span>Last Name</span></dt>
                 <dd>
                     <span>{{speaker.lastName}}</span>
                 </dd>
-                <dt><span jhiTranslate="gatewayApp.speaker.email">Email</span></dt>
+                <dt><span>Email</span></dt>
                 <dd>
                     <span>{{speaker.email}}</span>
                 </dd>
-                <dt><span jhiTranslate="gatewayApp.speaker.twitter">Twitter</span></dt>
+                <dt><span>Twitter</span></dt>
                 <dd>
                     <span>{{speaker.twitter}}</span>
                 </dd>
-                <dt><span jhiTranslate="gatewayApp.speaker.bio">Bio</span></dt>
+                <dt><span>Bio</span></dt>
                 <dd>
                     <span>{{speaker.bio}}</span>
                 </dd>
-                <dt><span jhiTranslate="gatewayApp.speaker.sessions">Sessions</span></dt>
+                <dt><span>Sessions</span></dt>
                 <dd>
                     <span *ngFor="let sessions of speaker.sessions; let last = last">
                         <a [routerLink]="['/session', sessions?.id, 'view' ]">{{sessions.id}}</a>{{last ? '' : ', '}}
@@ -36,13 +36,13 @@
             <button type="submit"
                     (click)="previousState()"
                     class="btn btn-info">
-                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
             </button>
 
             <button type="button"
                     [routerLink]="['/speaker', speaker.id, 'edit']"
                     class="btn btn-primary">
-                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
             </button>
         </div>
     </div>

@@ -1,10 +1,10 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
-import { of, throwError } from 'rxjs';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {HttpErrorResponse, HttpResponse} from '@angular/common/http';
+import {of, throwError} from 'rxjs';
 
-import { GatewayTestModule } from '../../../test.module';
-import { JhiHealthCheckComponent } from 'app/admin/health/health.component';
-import { JhiHealthService } from 'app/admin/health/health.service';
+import {GatewayTestModule} from '../../../test.module';
+import {JhiHealthCheckComponent} from 'app/admin/health/health.component';
+import {JhiHealthService} from 'app/admin/health/health.service';
 
 describe('Component Tests', () => {
     describe('JhiHealthCheckComponent', () => {
@@ -12,16 +12,14 @@ describe('Component Tests', () => {
         let fixture: ComponentFixture<JhiHealthCheckComponent>;
         let service: JhiHealthService;
 
-        beforeEach(
-            async(() => {
-                TestBed.configureTestingModule({
-                    imports: [GatewayTestModule],
-                    declarations: [JhiHealthCheckComponent]
-                })
-                    .overrideTemplate(JhiHealthCheckComponent, '')
-                    .compileComponents();
+        beforeEach(async(() => {
+            TestBed.configureTestingModule({
+                imports: [GatewayTestModule],
+                declarations: [JhiHealthCheckComponent]
             })
-        );
+                .overrideTemplate(JhiHealthCheckComponent, '')
+                .compileComponents();
+        }));
 
         beforeEach(() => {
             fixture = TestBed.createComponent(JhiHealthCheckComponent);

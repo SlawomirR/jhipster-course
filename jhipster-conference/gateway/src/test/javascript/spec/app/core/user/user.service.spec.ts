@@ -1,9 +1,9 @@
-import { TestBed } from '@angular/core/testing';
-import { JhiDateUtils } from 'ng-jhipster';
+import {TestBed} from '@angular/core/testing';
+import {JhiDateUtils} from 'ng-jhipster';
 
-import { User, UserService } from 'app/core';
-import { SERVER_API_URL } from 'app/app.constants';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import {User, UserService} from 'app/core';
+import {SERVER_API_URL} from 'app/app.constants';
+import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 
 describe('Service Tests', () => {
     describe('User Service', () => {

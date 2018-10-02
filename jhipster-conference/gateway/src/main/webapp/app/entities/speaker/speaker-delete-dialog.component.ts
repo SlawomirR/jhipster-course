@@ -1,11 +1,11 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 
-import { NgbActiveModal, NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { JhiEventManager } from 'ng-jhipster';
+import {NgbActiveModal, NgbModal, NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
+import {JhiEventManager} from 'ng-jhipster';
 
-import { ISpeaker } from 'app/shared/model/speaker.model';
-import { SpeakerService } from './speaker.service';
+import {ISpeaker} from 'app/shared/model/speaker.model';
+import {SpeakerService} from './speaker.service';
 
 @Component({
     selector: 'jhi-speaker-delete-dialog',

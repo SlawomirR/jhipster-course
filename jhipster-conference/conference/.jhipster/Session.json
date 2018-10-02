@@ -39,7 +39,7 @@
             "otherEntityRelationshipName": "sessions"
         }
     ],
-    "changelogDate": "20180930200213",
+    "changelogDate": "20181002061941",
     "entityTableName": "session",
     "dto": "no",
     "pagination": "no",

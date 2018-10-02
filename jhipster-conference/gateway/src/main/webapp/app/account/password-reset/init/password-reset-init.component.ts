@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, ElementRef, OnInit, Renderer } from '@angular/core';
-import { EMAIL_NOT_FOUND_TYPE } from 'app/shared';
-import { PasswordResetInitService } from './password-reset-init.service';
+import {AfterViewInit, Component, ElementRef, OnInit, Renderer} from '@angular/core';
+import {EMAIL_NOT_FOUND_TYPE} from 'app/shared';
+import {PasswordResetInitService} from './password-reset-init.service';
 
 @Component({
     selector: 'jhi-password-reset-init',

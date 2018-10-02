@@ -1,12 +1,12 @@
 /* tslint:disable max-line-length */
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { of } from 'rxjs';
-import { HttpHeaders, HttpResponse } from '@angular/common/http';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {Observable, of} from 'rxjs';
+import {HttpHeaders, HttpResponse} from '@angular/common/http';
 
-import { GatewayTestModule } from '../../../test.module';
-import { SpeakerComponent } from 'app/entities/speaker/speaker.component';
-import { SpeakerService } from 'app/entities/speaker/speaker.service';
-import { Speaker } from 'app/shared/model/speaker.model';
+import {GatewayTestModule} from '../../../test.module';
+import {SpeakerComponent} from 'app/entities/speaker/speaker.component';
+import {SpeakerService} from 'app/entities/speaker/speaker.service';
+import {Speaker} from 'app/shared/model/speaker.model';
 
 describe('Component Tests', () => {
     describe('Speaker Management Component', () => {

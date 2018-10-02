@@ -1,9 +1,9 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { throwError } from 'rxjs';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {Observable, throwError} from 'rxjs';
 
-import { GatewayTestModule } from '../../../test.module';
-import { AccountService, Principal } from 'app/core';
-import { SettingsComponent } from 'app/account/settings/settings.component';
+import {GatewayTestModule} from '../../../test.module';
+import {AccountService, Principal} from 'app/core';
+import {SettingsComponent} from 'app/account/settings/settings.component';
 
 describe('Component Tests', () => {
     describe('SettingsComponent', () => {
@@ -12,17 +12,15 @@ describe('Component Tests', () => {
         let mockAuth: any;
         let mockPrincipal: any;
 
-        beforeEach(
-            async(() => {
-                TestBed.configureTestingModule({
-                    imports: [GatewayTestModule],
-                    declarations: [SettingsComponent],
-                    providers: []
-                })
-                    .overrideTemplate(SettingsComponent, '')
-                    .compileComponents();
+        beforeEach(async(() => {
+            TestBed.configureTestingModule({
+                imports: [GatewayTestModule],
+                declarations: [SettingsComponent],
+                providers: []
             })
-        );
+                .overrideTemplate(SettingsComponent, '')
+                .compileComponents();
+        }));
 
         beforeEach(() => {
             fixture = TestBed.createComponent(SettingsComponent);

@@ -1,25 +1,25 @@
 import './vendor.ts';
 
-import { Injector, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { NgbDatepickerConfig } from '@ng-bootstrap/ng-bootstrap';
-import { LocalStorageService, Ng2Webstorage, SessionStorageService } from 'ngx-webstorage';
-import { JhiEventManager } from 'ng-jhipster';
+import {Injector, NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {NgbDatepickerConfig} from '@ng-bootstrap/ng-bootstrap';
+import {LocalStorageService, Ng2Webstorage, SessionStorageService} from 'ngx-webstorage';
+import {JhiEventManager} from 'ng-jhipster';
 
-import { AuthInterceptor } from './blocks/interceptor/auth.interceptor';
-import { AuthExpiredInterceptor } from './blocks/interceptor/auth-expired.interceptor';
-import { ErrorHandlerInterceptor } from './blocks/interceptor/errorhandler.interceptor';
-import { NotificationInterceptor } from './blocks/interceptor/notification.interceptor';
-import { GatewaySharedModule } from 'app/shared';
-import { GatewayCoreModule } from 'app/core';
-import { GatewayAppRoutingModule } from './app-routing.module';
-import { GatewayHomeModule } from './home/home.module';
-import { GatewayAccountModule } from './account/account.module';
-import { GatewayEntityModule } from './entities/entity.module';
+import {AuthInterceptor} from './blocks/interceptor/auth.interceptor';
+import {AuthExpiredInterceptor} from './blocks/interceptor/auth-expired.interceptor';
+import {ErrorHandlerInterceptor} from './blocks/interceptor/errorhandler.interceptor';
+import {NotificationInterceptor} from './blocks/interceptor/notification.interceptor';
+import {GatewaySharedModule} from 'app/shared';
+import {GatewayCoreModule} from 'app/core';
+import {GatewayAppRoutingModule} from './app-routing.module';
+import {GatewayHomeModule} from './home/home.module';
+import {GatewayAccountModule} from './account/account.module';
+import {GatewayEntityModule} from './entities/entity.module';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
-import { ActiveMenuDirective, ErrorComponent, FooterComponent, JhiMainComponent, NavbarComponent, PageRibbonComponent } from './layouts';
+import {ErrorComponent, FooterComponent, JhiMainComponent, NavbarComponent, PageRibbonComponent} from './layouts';
 
 @NgModule({
     imports: [
@@ -33,7 +33,7 @@ import { ActiveMenuDirective, ErrorComponent, FooterComponent, JhiMainComponent,
         GatewayEntityModule
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
-    declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
+    declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
     providers: [
         {
             provide: HTTP_INTERCEPTORS,

@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {HttpErrorResponse, HttpResponse} from '@angular/common/http';
+import {Observable} from 'rxjs';
 import * as moment from 'moment';
-import { DATE_TIME_FORMAT } from 'app/shared/constants/input.constants';
-import { JhiAlertService } from 'ng-jhipster';
+import {DATE_TIME_FORMAT} from 'app/shared/constants/input.constants';
+import {JhiAlertService} from 'ng-jhipster';
 
-import { ISession } from 'app/shared/model/session.model';
-import { SessionService } from './session.service';
-import { ISpeaker } from 'app/shared/model/speaker.model';
-import { SpeakerService } from 'app/entities/speaker';
+import {ISession} from 'app/shared/model/session.model';
+import {SessionService} from './session.service';
+import {ISpeaker} from 'app/shared/model/speaker.model';
+import {SpeakerService} from 'app/entities/speaker';
 
 @Component({
     selector: 'jhi-session-update',

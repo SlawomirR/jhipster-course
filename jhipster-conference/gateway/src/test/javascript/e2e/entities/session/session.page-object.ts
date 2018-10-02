@@ -1,4 +1,4 @@
-import { by, element, ElementFinder } from 'protractor';
+import {by, element, ElementFinder} from 'protractor';
 
 export class SessionComponentsPage {
     createButton = element(by.id('jh-create-entity'));
@@ -18,7 +18,7 @@ export class SessionComponentsPage {
     }
 
     async getTitle() {
-        return this.title.getAttribute('jhiTranslate');
+        return this.title.getText();
     }
 }
 
@@ -32,7 +32,7 @@ export class SessionUpdatePage {
     endDateTimeInput = element(by.id('field_endDateTime'));
 
     async getPageTitle() {
-        return this.pageTitle.getAttribute('jhiTranslate');
+        return this.pageTitle.getText();
     }
 
     async setTitleInput(title) {
@@ -85,7 +85,7 @@ export class SessionDeleteDialog {
     private confirmButton = element(by.id('jhi-confirm-delete-session'));
 
     async getDialogTitle() {
-        return this.dialogTitle.getAttribute('jhiTranslate');
+        return this.dialogTitle.getText();
     }
 
     async clickOnConfirmButton() {

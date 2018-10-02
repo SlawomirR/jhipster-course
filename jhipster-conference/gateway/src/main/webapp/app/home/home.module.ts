@@ -1,8 +1,8 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
 
-import { GatewaySharedModule } from 'app/shared';
-import { HOME_ROUTE, HomeComponent } from './';
+import {GatewaySharedModule} from 'app/shared';
+import {HOME_ROUTE, HomeComponent} from './';
 
 @NgModule({
     imports: [GatewaySharedModule, RouterModule.forChild([HOME_ROUTE])],

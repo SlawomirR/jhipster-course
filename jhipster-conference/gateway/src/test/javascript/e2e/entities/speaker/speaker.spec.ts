@@ -1,7 +1,7 @@
-import { browser, ExpectedConditions as ec } from 'protractor';
-import { NavBarPage, SignInPage } from '../../page-objects/jhi-page-objects';
+import {browser, ExpectedConditions as ec} from 'protractor';
+import {NavBarPage, SignInPage} from '../../page-objects/jhi-page-objects';
 
-import { SpeakerComponentsPage, SpeakerDeleteDialog, SpeakerUpdatePage } from './speaker.page-object';
+import {SpeakerComponentsPage, SpeakerDeleteDialog, SpeakerUpdatePage} from './speaker.page-object';
 
 describe('Speaker e2e test', () => {
     let navBarPage: NavBarPage;
@@ -21,13 +21,13 @@ describe('Speaker e2e test', () => {
     it('should load Speakers', async () => {
         await navBarPage.goToEntity('speaker');
         speakerComponentsPage = new SpeakerComponentsPage();
-        expect(await speakerComponentsPage.getTitle()).toMatch(/gatewayApp.speaker.home.title/);
+        expect(await speakerComponentsPage.getTitle()).toMatch(/Speakers/);
     });
 
     it('should load create Speaker page', async () => {
         await speakerComponentsPage.clickOnCreateButton();
         speakerUpdatePage = new SpeakerUpdatePage();
-        expect(await speakerUpdatePage.getPageTitle()).toMatch(/gatewayApp.speaker.home.createOrEditLabel/);
+        expect(await speakerUpdatePage.getPageTitle()).toMatch(/Create or edit a Speaker/);
         await speakerUpdatePage.cancel();
     });
 
@@ -53,7 +53,7 @@ describe('Speaker e2e test', () => {
         await speakerComponentsPage.clickOnLastDeleteButton();
 
         speakerDeleteDialog = new SpeakerDeleteDialog();
-        expect(await speakerDeleteDialog.getDialogTitle()).toMatch(/gatewayApp.speaker.delete.question/);
+        expect(await speakerDeleteDialog.getDialogTitle()).toMatch(/Are you sure you want to delete this Speaker?/);
         await speakerDeleteDialog.clickOnConfirmButton();
 
         expect(await speakerComponentsPage.countDeleteButtons()).toBe(nbButtonsBeforeDelete - 1);

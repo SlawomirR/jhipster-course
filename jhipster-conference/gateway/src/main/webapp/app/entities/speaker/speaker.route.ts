@@ -1,15 +1,15 @@
-import { Injectable } from '@angular/core';
-import { HttpResponse } from '@angular/common/http';
-import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot, Routes } from '@angular/router';
-import { UserRouteAccessService } from 'app/core';
-import { of } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { ISpeaker, Speaker } from 'app/shared/model/speaker.model';
-import { SpeakerService } from './speaker.service';
-import { SpeakerComponent } from './speaker.component';
-import { SpeakerDetailComponent } from './speaker-detail.component';
-import { SpeakerUpdateComponent } from './speaker-update.component';
-import { SpeakerDeletePopupComponent } from './speaker-delete-dialog.component';
+import {Injectable} from '@angular/core';
+import {HttpResponse} from '@angular/common/http';
+import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot, Routes} from '@angular/router';
+import {UserRouteAccessService} from 'app/core';
+import {of} from 'rxjs';
+import {map} from 'rxjs/operators';
+import {ISpeaker, Speaker} from 'app/shared/model/speaker.model';
+import {SpeakerService} from './speaker.service';
+import {SpeakerComponent} from './speaker.component';
+import {SpeakerDetailComponent} from './speaker-detail.component';
+import {SpeakerUpdateComponent} from './speaker-update.component';
+import {SpeakerDeletePopupComponent} from './speaker-delete-dialog.component';
 
 @Injectable({ providedIn: 'root' })
 export class SpeakerResolve implements Resolve<ISpeaker> {
@@ -30,7 +30,7 @@ export const speakerRoute: Routes = [
         component: SpeakerComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'gatewayApp.speaker.home.title'
+            pageTitle: 'Speakers'
         },
         canActivate: [UserRouteAccessService]
     },
@@ -42,7 +42,7 @@ export const speakerRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'gatewayApp.speaker.home.title'
+            pageTitle: 'Speakers'
         },
         canActivate: [UserRouteAccessService]
     },
@@ -54,7 +54,7 @@ export const speakerRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'gatewayApp.speaker.home.title'
+            pageTitle: 'Speakers'
         },
         canActivate: [UserRouteAccessService]
     },
@@ -66,7 +66,7 @@ export const speakerRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'gatewayApp.speaker.home.title'
+            pageTitle: 'Speakers'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -81,7 +81,7 @@ export const speakerPopupRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'gatewayApp.speaker.home.title'
+            pageTitle: 'Speakers'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

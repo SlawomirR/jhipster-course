@@ -1,13 +1,13 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { HttpResponse } from '@angular/common/http';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {HttpResponse} from '@angular/common/http';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
-import { ActivatedRoute, Router } from '@angular/router';
-import { JhiAlertService, JhiEventManager, JhiParseLinks } from 'ng-jhipster';
+import {ActivatedRoute, Router} from '@angular/router';
+import {JhiAlertService, JhiEventManager, JhiParseLinks} from 'ng-jhipster';
 
-import { ITEMS_PER_PAGE } from 'app/shared';
-import { Principal, User, UserService } from 'app/core';
-import { UserMgmtDeleteDialogComponent } from 'app/admin';
+import {ITEMS_PER_PAGE} from 'app/shared';
+import {Principal, User, UserService} from 'app/core';
+import {UserMgmtDeleteDialogComponent} from 'app/admin';
 
 @Component({
     selector: 'jhi-user-mgmt',

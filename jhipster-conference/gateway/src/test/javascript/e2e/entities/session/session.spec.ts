@@ -1,7 +1,7 @@
-import { browser, ExpectedConditions as ec, protractor } from 'protractor';
-import { NavBarPage, SignInPage } from '../../page-objects/jhi-page-objects';
+import {browser, ExpectedConditions as ec, protractor} from 'protractor';
+import {NavBarPage, SignInPage} from '../../page-objects/jhi-page-objects';
 
-import { SessionComponentsPage, SessionDeleteDialog, SessionUpdatePage } from './session.page-object';
+import {SessionComponentsPage, SessionDeleteDialog, SessionUpdatePage} from './session.page-object';
 
 describe('Session e2e test', () => {
     let navBarPage: NavBarPage;
@@ -21,13 +21,13 @@ describe('Session e2e test', () => {
     it('should load Sessions', async () => {
         await navBarPage.goToEntity('session');
         sessionComponentsPage = new SessionComponentsPage();
-        expect(await sessionComponentsPage.getTitle()).toMatch(/gatewayApp.session.home.title/);
+        expect(await sessionComponentsPage.getTitle()).toMatch(/Sessions/);
     });
 
     it('should load create Session page', async () => {
         await sessionComponentsPage.clickOnCreateButton();
         sessionUpdatePage = new SessionUpdatePage();
-        expect(await sessionUpdatePage.getPageTitle()).toMatch(/gatewayApp.session.home.createOrEditLabel/);
+        expect(await sessionUpdatePage.getPageTitle()).toMatch(/Create or edit a Session/);
         await sessionUpdatePage.cancel();
     });
 
@@ -50,7 +50,7 @@ describe('Session e2e test', () => {
         await sessionComponentsPage.clickOnLastDeleteButton();
 
         sessionDeleteDialog = new SessionDeleteDialog();
-        expect(await sessionDeleteDialog.getDialogTitle()).toMatch(/gatewayApp.session.delete.question/);
+        expect(await sessionDeleteDialog.getDialogTitle()).toMatch(/Are you sure you want to delete this Session?/);
         await sessionDeleteDialog.clickOnConfirmButton();
 
         expect(await sessionComponentsPage.countDeleteButtons()).toBe(nbButtonsBeforeDelete - 1);

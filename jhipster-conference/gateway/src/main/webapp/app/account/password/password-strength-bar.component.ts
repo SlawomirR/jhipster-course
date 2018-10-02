@@ -1,10 +1,10 @@
-import { Component, ElementRef, Input, Renderer } from '@angular/core';
+import {Component, ElementRef, Input, Renderer} from '@angular/core';
 
 @Component({
     selector: 'jhi-password-strength-bar',
     template: `
         <div id="strength">
-            <small jhiTranslate="global.messages.validate.newpassword.strength">Password strength:</small>
+            <small>Password strength:</small>
             <ul id="strengthBar">
                 <li class="point"></li>
                 <li class="point"></li>

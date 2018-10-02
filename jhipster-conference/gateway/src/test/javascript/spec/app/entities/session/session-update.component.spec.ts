@@ -1,12 +1,12 @@
 /* tslint:disable max-line-length */
-import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
-import { HttpResponse } from '@angular/common/http';
-import { of } from 'rxjs';
+import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
+import {HttpResponse} from '@angular/common/http';
+import {Observable, of} from 'rxjs';
 
-import { GatewayTestModule } from '../../../test.module';
-import { SessionUpdateComponent } from 'app/entities/session/session-update.component';
-import { SessionService } from 'app/entities/session/session.service';
-import { Session } from 'app/shared/model/session.model';
+import {GatewayTestModule} from '../../../test.module';
+import {SessionUpdateComponent} from 'app/entities/session/session-update.component';
+import {SessionService} from 'app/entities/session/session.service';
+import {Session} from 'app/shared/model/session.model';
 
 describe('Component Tests', () => {
     describe('Session Management Update Component', () => {

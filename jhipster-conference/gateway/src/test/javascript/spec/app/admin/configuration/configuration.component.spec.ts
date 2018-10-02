@@ -1,9 +1,10 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { of } from 'rxjs';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {of} from 'rxjs';
+import {HttpHeaders, HttpResponse} from '@angular/common/http';
 
-import { GatewayTestModule } from '../../../test.module';
-import { JhiConfigurationComponent } from 'app/admin/configuration/configuration.component';
-import { JhiConfigurationService } from 'app/admin/configuration/configuration.service';
+import {GatewayTestModule} from '../../../test.module';
+import {JhiConfigurationComponent} from 'app/admin/configuration/configuration.component';
+import {JhiConfigurationService} from 'app/admin/configuration/configuration.service';
 
 describe('Component Tests', () => {
     describe('JhiConfigurationComponent', () => {
@@ -11,17 +12,15 @@ describe('Component Tests', () => {
         let fixture: ComponentFixture<JhiConfigurationComponent>;
         let service: JhiConfigurationService;
 
-        beforeEach(
-            async(() => {
-                TestBed.configureTestingModule({
-                    imports: [GatewayTestModule],
-                    declarations: [JhiConfigurationComponent],
-                    providers: [JhiConfigurationService]
-                })
-                    .overrideTemplate(JhiConfigurationComponent, '')
-                    .compileComponents();
+        beforeEach(async(() => {
+            TestBed.configureTestingModule({
+                imports: [GatewayTestModule],
+                declarations: [JhiConfigurationComponent],
+                providers: [JhiConfigurationService]
             })
-        );
+                .overrideTemplate(JhiConfigurationComponent, '')
+                .compileComponents();
+        }));
 
         beforeEach(() => {
             fixture = TestBed.createComponent(JhiConfigurationComponent);

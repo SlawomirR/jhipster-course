@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 
-import { FindLanguageFromKeyPipe, GatewaySharedLibsModule, JhiAlertComponent, JhiAlertErrorComponent } from './';
+import {GatewaySharedLibsModule, JhiAlertComponent, JhiAlertErrorComponent} from './';
 
 @NgModule({
     imports: [GatewaySharedLibsModule],
-    declarations: [FindLanguageFromKeyPipe, JhiAlertComponent, JhiAlertErrorComponent],
-    exports: [GatewaySharedLibsModule, FindLanguageFromKeyPipe, JhiAlertComponent, JhiAlertErrorComponent]
+    declarations: [JhiAlertComponent, JhiAlertErrorComponent],
+    exports: [GatewaySharedLibsModule, JhiAlertComponent, JhiAlertErrorComponent]
 })
 export class GatewaySharedCommonModule {}

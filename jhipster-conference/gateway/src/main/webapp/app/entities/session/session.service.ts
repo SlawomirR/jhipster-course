@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpResponse} from '@angular/common/http';
+import {Observable} from 'rxjs';
 import * as moment from 'moment';
-import { map } from 'rxjs/operators';
+import {map} from 'rxjs/operators';
 
-import { SERVER_API_URL } from 'app/app.constants';
-import { createRequestOption } from 'app/shared';
-import { ISession } from 'app/shared/model/session.model';
+import {SERVER_API_URL} from 'app/app.constants';
+import {createRequestOption} from 'app/shared';
+import {ISession} from 'app/shared/model/session.model';
 
 type EntityResponseType = HttpResponse<ISession>;
 type EntityArrayResponseType = HttpResponse<ISession[]>;

@@ -1,8 +1,7 @@
 {
   "generator-jhipster": {
     "promptValues": {
-      "packageName": "io.github.slawomirr",
-      "nativeLanguage": "en"
+      "packageName": "io.github.slawomirr"
     },
     "jhipsterVersion": "5.3.1",
     "applicationType": "microservice",
@@ -22,19 +21,14 @@
     "serviceDiscoveryType": "eureka",
     "buildTool": "maven",
     "enableSwaggerCodegen": false,
-    "jwtSecretKey": "M2QyZGMwZWI5ZDY1YWI4YmU4OWNiMDhmNmEyNTY5MzU0ZGNmYTQ1ZTliMzY1YjQ2NjhiNTMxYWM1ZTIwYjgyZTQyYTgwM2FkNjMzZDc2NzIyNjBmM2EwYmU2OTYxMjczNjNhYWEzMmE1ODMwOTk4YzE1OGM3YmNhOGUwMzU4Y2I=",
-    "enableTranslation": true,
+    "jwtSecretKey": "NTg2ZjRkMjIzN2Y3YjA5NTJmMjE5OWI5OTdkNWUwYjMzOGE5MzFjN2QyMDg2MjQ3NzNlZjY4OGYyMTY1Y2U4NTNiZWEwMzk2Mzk0ZTZjYjVhYjAwNDUzNTUzZGEwMDE3Njg3YTZmMmMzYjE0ZDAyMGExN2Y3NTE1NjBmMTc1NzM=",
+    "enableTranslation": false,
     "testFrameworks": [
       "gatling",
       "cucumber"
     ],
     "jhiPrefix": "jhi",
-    "clientPackageManager": "npm",
-    "nativeLanguage": "en",
-    "languages": [
-      "en",
-      "pl"
-    ],
+    "clientPackageManager": "yarn",
     "skipClient": true,
     "skipUserManagement": true
   }

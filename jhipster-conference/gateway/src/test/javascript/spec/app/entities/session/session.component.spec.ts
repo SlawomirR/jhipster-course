@@ -1,12 +1,12 @@
 /* tslint:disable max-line-length */
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { of } from 'rxjs';
-import { HttpHeaders, HttpResponse } from '@angular/common/http';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {Observable, of} from 'rxjs';
+import {HttpHeaders, HttpResponse} from '@angular/common/http';
 
-import { GatewayTestModule } from '../../../test.module';
-import { SessionComponent } from 'app/entities/session/session.component';
-import { SessionService } from 'app/entities/session/session.service';
-import { Session } from 'app/shared/model/session.model';
+import {GatewayTestModule} from '../../../test.module';
+import {SessionComponent} from 'app/entities/session/session.component';
+import {SessionService} from 'app/entities/session/session.service';
+import {Session} from 'app/shared/model/session.model';
 
 describe('Component Tests', () => {
     describe('Session Management Component', () => {

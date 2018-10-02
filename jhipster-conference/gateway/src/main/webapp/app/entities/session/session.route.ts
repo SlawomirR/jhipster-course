@@ -1,15 +1,15 @@
-import { Injectable } from '@angular/core';
-import { HttpResponse } from '@angular/common/http';
-import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot, Routes } from '@angular/router';
-import { UserRouteAccessService } from 'app/core';
-import { of } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { ISession, Session } from 'app/shared/model/session.model';
-import { SessionService } from './session.service';
-import { SessionComponent } from './session.component';
-import { SessionDetailComponent } from './session-detail.component';
-import { SessionUpdateComponent } from './session-update.component';
-import { SessionDeletePopupComponent } from './session-delete-dialog.component';
+import {Injectable} from '@angular/core';
+import {HttpResponse} from '@angular/common/http';
+import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot, Routes} from '@angular/router';
+import {UserRouteAccessService} from 'app/core';
+import {of} from 'rxjs';
+import {map} from 'rxjs/operators';
+import {ISession, Session} from 'app/shared/model/session.model';
+import {SessionService} from './session.service';
+import {SessionComponent} from './session.component';
+import {SessionDetailComponent} from './session-detail.component';
+import {SessionUpdateComponent} from './session-update.component';
+import {SessionDeletePopupComponent} from './session-delete-dialog.component';
 
 @Injectable({ providedIn: 'root' })
 export class SessionResolve implements Resolve<ISession> {
@@ -30,7 +30,7 @@ export const sessionRoute: Routes = [
         component: SessionComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'gatewayApp.session.home.title'
+            pageTitle: 'Sessions'
         },
         canActivate: [UserRouteAccessService]
     },
@@ -42,7 +42,7 @@ export const sessionRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'gatewayApp.session.home.title'
+            pageTitle: 'Sessions'
         },
         canActivate: [UserRouteAccessService]
     },
@@ -54,7 +54,7 @@ export const sessionRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'gatewayApp.session.home.title'
+            pageTitle: 'Sessions'
         },
         canActivate: [UserRouteAccessService]
     },
@@ -66,7 +66,7 @@ export const sessionRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'gatewayApp.session.home.title'
+            pageTitle: 'Sessions'
         },
         canActivate: [UserRouteAccessService]
     }
@@ -81,7 +81,7 @@ export const sessionPopupRoute: Routes = [
         },
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'gatewayApp.session.home.title'
+            pageTitle: 'Sessions'
         },
         canActivate: [UserRouteAccessService],
         outlet: 'popup'

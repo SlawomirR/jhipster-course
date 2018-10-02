@@ -1,4 +1,4 @@
-import { by, element, ElementFinder } from 'protractor';
+import {by, element, ElementFinder} from 'protractor';
 
 export class NavBarPage {
     entityMenu = element(by.id('entity-menu'));
@@ -169,7 +169,7 @@ export class PasswordPage {
     }
 
     async getTitle() {
-        return this.title.getAttribute('jhiTranslate');
+        return this.title.getText();
     }
 
     async save() {
@@ -221,7 +221,7 @@ export class SettingsPage {
     }
 
     async getTitle() {
-        return this.title.getAttribute('jhiTranslate');
+        return this.title.getText();
     }
 
     async save() {

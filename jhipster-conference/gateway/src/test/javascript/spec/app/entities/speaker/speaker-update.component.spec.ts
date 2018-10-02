@@ -1,12 +1,12 @@
 /* tslint:disable max-line-length */
-import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
-import { HttpResponse } from '@angular/common/http';
-import { of } from 'rxjs';
+import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
+import {HttpResponse} from '@angular/common/http';
+import {Observable, of} from 'rxjs';
 
-import { GatewayTestModule } from '../../../test.module';
-import { SpeakerUpdateComponent } from 'app/entities/speaker/speaker-update.component';
-import { SpeakerService } from 'app/entities/speaker/speaker.service';
-import { Speaker } from 'app/shared/model/speaker.model';
+import {GatewayTestModule} from '../../../test.module';
+import {SpeakerUpdateComponent} from 'app/entities/speaker/speaker-update.component';
+import {SpeakerService} from 'app/entities/speaker/speaker.service';
+import {Speaker} from 'app/shared/model/speaker.model';
 
 describe('Component Tests', () => {
     describe('Speaker Management Update Component', () => {

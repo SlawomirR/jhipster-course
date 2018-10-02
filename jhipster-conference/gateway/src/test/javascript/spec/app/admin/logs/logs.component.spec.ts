@@ -1,11 +1,11 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { of } from 'rxjs';
-import { HttpHeaders, HttpResponse } from '@angular/common/http';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {of} from 'rxjs';
+import {HttpHeaders, HttpResponse} from '@angular/common/http';
 
-import { GatewayTestModule } from '../../../test.module';
-import { LogsComponent } from 'app/admin/logs/logs.component';
-import { LogsService } from 'app/admin/logs/logs.service';
-import { Log } from 'app/admin';
+import {GatewayTestModule} from '../../../test.module';
+import {LogsComponent} from 'app/admin/logs/logs.component';
+import {LogsService} from 'app/admin/logs/logs.service';
+import {Log} from 'app/admin';
 
 describe('Component Tests', () => {
     describe('LogsComponent', () => {
@@ -13,17 +13,15 @@ describe('Component Tests', () => {
         let fixture: ComponentFixture<LogsComponent>;
         let service: LogsService;
 
-        beforeEach(
-            async(() => {
-                TestBed.configureTestingModule({
-                    imports: [GatewayTestModule],
-                    declarations: [LogsComponent],
-                    providers: [LogsService]
-                })
-                    .overrideTemplate(LogsComponent, '')
-                    .compileComponents();
+        beforeEach(async(() => {
+            TestBed.configureTestingModule({
+                imports: [GatewayTestModule],
+                declarations: [LogsComponent],
+                providers: [LogsService]
             })
-        );
+                .overrideTemplate(LogsComponent, '')
+                .compileComponents();
+        }));
 
         beforeEach(() => {
             fixture = TestBed.createComponent(LogsComponent);

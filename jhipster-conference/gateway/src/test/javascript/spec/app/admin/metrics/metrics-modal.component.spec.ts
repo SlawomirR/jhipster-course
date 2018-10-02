@@ -1,8 +1,10 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {HttpErrorResponse, HttpResponse} from '@angular/common/http';
+import {of, throwError} from 'rxjs';
 
-import { GatewayTestModule } from '../../../test.module';
-import { JhiMetricsMonitoringModalComponent } from 'app/admin/metrics/metrics-modal.component';
-import { JhiMetricsService } from 'app/admin/metrics/metrics.service';
+import {GatewayTestModule} from '../../../test.module';
+import {JhiMetricsMonitoringModalComponent} from 'app/admin/metrics/metrics-modal.component';
+import {JhiMetricsService} from 'app/admin/metrics/metrics.service';
 
 describe('Component Tests', () => {
     describe('JhiMetricsMonitoringModalComponent', () => {
@@ -10,16 +12,14 @@ describe('Component Tests', () => {
         let fixture: ComponentFixture<JhiMetricsMonitoringModalComponent>;
         let service: JhiMetricsService;
 
-        beforeEach(
-            async(() => {
-                TestBed.configureTestingModule({
-                    imports: [GatewayTestModule],
-                    declarations: [JhiMetricsMonitoringModalComponent]
-                })
-                    .overrideTemplate(JhiMetricsMonitoringModalComponent, '')
-                    .compileComponents();
+        beforeEach(async(() => {
+            TestBed.configureTestingModule({
+                imports: [GatewayTestModule],
+                declarations: [JhiMetricsMonitoringModalComponent]
             })
-        );
+                .overrideTemplate(JhiMetricsMonitoringModalComponent, '')
+                .compileComponents();
+        }));
 
         beforeEach(() => {
             fixture = TestBed.createComponent(JhiMetricsMonitoringModalComponent);

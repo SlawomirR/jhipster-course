@@ -54,13 +54,9 @@ spring:
         properties:
             hibernate.id.new_generator_mappings: true
             hibernate.connection.provider_disables_autocommit: true
-            hibernate.cache.use_second_level_cache: true
+            hibernate.cache.use_second_level_cache: false
             hibernate.cache.use_query_cache: false
             hibernate.generate_statistics: true
-            hibernate.cache.region.factory_class: com.hazelcast.hibernate.HazelcastCacheRegionFactory
-            hibernate.cache.hazelcast.instance_name: gateway
-            hibernate.cache.use_minimal_puts: true
-            hibernate.cache.hazelcast.use_lite_member: true
     liquibase:
         contexts: dev
     mail:
@@ -132,7 +128,7 @@ jhipster:
         authentication:
             jwt:
                 # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-                base64-secret: ZWRmY2QzZTM4OTRiOGZiNWFiZWZkMjZmMWVkMjczNWVkYTBhOGFmODA5YmYwNDk3ODAyMDMyMzYyY2MyNmQ0NmJiMmJmZjRlOGYxY2U2NzU4MDQ4YTYzZDMyMDBmZjI2ODYwNzRlY2E3MGIyZTJiMTNhZDFkNWQ5MjQ0MzhmYzI=
+                base64-secret: YTkyYmFhM2M4MWM3YWIzOWVkMDA3MTdjMzRmZWI5NDdiNjNjOGExMGMwZjdhMDRjNWFiNzEzMmEyMTg4Y2Y0OTU5NWE2MWQwZTNjYWI0NWY5OGIwZjNjNzFlNDJkYjkzM2RkN2UzYjE5ZWE2YzhkY2JhZmMzNjU5MjY5ZTE4YjQ=
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
                 token-validity-in-seconds-for-remember-me: 2592000

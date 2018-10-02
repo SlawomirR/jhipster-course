@@ -1,9 +1,9 @@
 /* tslint:disable max-line-length */
-import { getTestBed, TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { SpeakerService } from 'app/entities/speaker/speaker.service';
-import { Speaker } from 'app/shared/model/speaker.model';
-import { SERVER_API_URL } from 'app/app.constants';
+import {getTestBed, TestBed} from '@angular/core/testing';
+import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
+import {SpeakerService} from 'app/entities/speaker/speaker.service';
+import {Speaker} from 'app/shared/model/speaker.model';
+import {SERVER_API_URL} from 'app/app.constants';
 
 describe('Service Tests', () => {
     describe('Speaker Service', () => {

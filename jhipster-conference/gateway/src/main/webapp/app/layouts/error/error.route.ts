@@ -1,6 +1,6 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 
-import { ErrorComponent } from './error.component';
+import {ErrorComponent} from './error.component';
 
 export const errorRoute: Routes = [
     {
@@ -8,7 +8,7 @@ export const errorRoute: Routes = [
         component: ErrorComponent,
         data: {
             authorities: [],
-            pageTitle: 'error.title'
+            pageTitle: 'gateway'
         }
     },
     {
@@ -16,7 +16,7 @@ export const errorRoute: Routes = [
         component: ErrorComponent,
         data: {
             authorities: [],
-            pageTitle: 'error.title',
+            pageTitle: 'gateway',
             error403: true
         }
     }

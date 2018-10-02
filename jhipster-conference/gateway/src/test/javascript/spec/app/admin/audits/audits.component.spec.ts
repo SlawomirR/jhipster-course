@@ -1,12 +1,12 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { of } from 'rxjs';
-import { HttpHeaders, HttpResponse } from '@angular/common/http';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {Observable, of} from 'rxjs';
+import {HttpHeaders, HttpResponse} from '@angular/common/http';
 
-import { GatewayTestModule } from '../../../test.module';
-import { AuditsComponent } from 'app/admin/audits/audits.component';
-import { AuditsService } from 'app/admin/audits/audits.service';
-import { Audit } from 'app/admin/audits/audit.model';
-import { ITEMS_PER_PAGE } from 'app/shared';
+import {GatewayTestModule} from '../../../test.module';
+import {AuditsComponent} from 'app/admin/audits/audits.component';
+import {AuditsService} from 'app/admin/audits/audits.service';
+import {Audit} from 'app/admin/audits/audit.model';
+import {ITEMS_PER_PAGE} from 'app/shared';
 
 function build2DigitsDatePart(datePart: number) {
     return `0${datePart}`.slice(-2);
@@ -36,17 +36,15 @@ describe('Component Tests', () => {
         let fixture: ComponentFixture<AuditsComponent>;
         let service: AuditsService;
 
-        beforeEach(
-            async(() => {
-                TestBed.configureTestingModule({
-                    imports: [GatewayTestModule],
-                    declarations: [AuditsComponent],
-                    providers: [AuditsService]
-                })
-                    .overrideTemplate(AuditsComponent, '')
-                    .compileComponents();
+        beforeEach(async(() => {
+            TestBed.configureTestingModule({
+                imports: [GatewayTestModule],
+                declarations: [AuditsComponent],
+                providers: [AuditsService]
             })
-        );
+                .overrideTemplate(AuditsComponent, '')
+                .compileComponents();
+        }));
 
         beforeEach(() => {
             fixture = TestBed.createComponent(AuditsComponent);

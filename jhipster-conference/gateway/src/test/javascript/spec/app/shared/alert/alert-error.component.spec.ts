@@ -1,11 +1,10 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { JhiAlertService, JhiEventManager } from 'ng-jhipster';
-import { TranslateModule } from '@ngx-translate/core';
+import {async, ComponentFixture, fakeAsync, inject, TestBed, tick} from '@angular/core/testing';
+import {HttpErrorResponse, HttpHeaders} from '@angular/common/http';
+import {JhiAlertService, JhiEventManager} from 'ng-jhipster';
 
-import { GatewayTestModule } from '../../../test.module';
-import { JhiAlertErrorComponent } from 'app/shared/alert/alert-error.component';
-import { MockAlertService } from '../../../helpers/mock-alert.service';
+import {GatewayTestModule} from '../../../test.module';
+import {JhiAlertErrorComponent} from 'app/shared/alert/alert-error.component';
+import {MockAlertService} from '../../../helpers/mock-alert.service';
 
 describe('Component Tests', () => {
     describe('Alert Error Component', () => {
@@ -13,23 +12,21 @@ describe('Component Tests', () => {
         let fixture: ComponentFixture<JhiAlertErrorComponent>;
         let eventManager: JhiEventManager;
 
-        beforeEach(
-            async(() => {
-                TestBed.configureTestingModule({
-                    imports: [GatewayTestModule, TranslateModule.forRoot()],
-                    declarations: [JhiAlertErrorComponent],
-                    providers: [
-                        JhiEventManager,
-                        {
-                            provide: JhiAlertService,
-                            useClass: MockAlertService
-                        }
-                    ]
-                })
-                    .overrideTemplate(JhiAlertErrorComponent, '')
-                    .compileComponents();
+        beforeEach(async(() => {
+            TestBed.configureTestingModule({
+                imports: [GatewayTestModule],
+                declarations: [JhiAlertErrorComponent],
+                providers: [
+                    JhiEventManager,
+                    {
+                        provide: JhiAlertService,
+                        useClass: MockAlertService
+                    }
+                ]
             })
-        );
+                .overrideTemplate(JhiAlertErrorComponent, '')
+                .compileComponents();
+        }));
 
         beforeEach(() => {
             fixture = TestBed.createComponent(JhiAlertErrorComponent);
@@ -43,14 +40,14 @@ describe('Component Tests', () => {
                 eventManager.broadcast({ name: 'gatewayApp.httpError', content: { status: 0 } });
                 // THEN
                 expect(comp.alerts.length).toBe(1);
-                expect(comp.alerts[0].msg).toBe('error.server.not.reachable');
+                expect(comp.alerts[0].msg).toBe('Server not reachable');
             });
             it('Should display an alert on status 404', () => {
                 // GIVEN
                 eventManager.broadcast({ name: 'gatewayApp.httpError', content: { status: 404 } });
                 // THEN
                 expect(comp.alerts.length).toBe(1);
-                expect(comp.alerts[0].msg).toBe('error.url.not.found');
+                expect(comp.alerts[0].msg).toBe('Not found');
             });
             it('Should display an alert on generic error', () => {
                 // GIVEN
@@ -113,7 +110,7 @@ describe('Component Tests', () => {
                 eventManager.broadcast({ name: 'gatewayApp.httpError', content: response });
                 // THEN
                 expect(comp.alerts.length).toBe(1);
-                expect(comp.alerts[0].msg).toBe('error.Size');
+                expect(comp.alerts[0].msg).toBe('Error on field "MinField"');
             });
             it('Should display an alert on status 400 for error headers', () => {
                 // GIVEN

@@ -1,4 +1,4 @@
-import { by, element, ElementFinder } from 'protractor';
+import {by, element, ElementFinder} from 'protractor';
 
 export class SpeakerComponentsPage {
     createButton = element(by.id('jh-create-entity'));
@@ -18,7 +18,7 @@ export class SpeakerComponentsPage {
     }
 
     async getTitle() {
-        return this.title.getAttribute('jhiTranslate');
+        return this.title.getText();
     }
 }
 
@@ -34,7 +34,7 @@ export class SpeakerUpdatePage {
     sessionsSelect = element(by.id('field_sessions'));
 
     async getPageTitle() {
-        return this.pageTitle.getAttribute('jhiTranslate');
+        return this.pageTitle.getText();
     }
 
     async setFirstNameInput(firstName) {
@@ -114,7 +114,7 @@ export class SpeakerDeleteDialog {
     private confirmButton = element(by.id('jhi-confirm-delete-speaker'));
 
     async getDialogTitle() {
-        return this.dialogTitle.getAttribute('jhiTranslate');
+        return this.dialogTitle.getText();
     }
 
     async clickOnConfirmButton() {

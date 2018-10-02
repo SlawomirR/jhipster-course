@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { JhiEventManager } from 'ng-jhipster';
+import {Component, OnInit} from '@angular/core';
+import {NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
+import {JhiEventManager} from 'ng-jhipster';
 
-import { Account, LoginModalService, Principal } from 'app/core';
+import {Account, LoginModalService, Principal} from 'app/core';
 
 @Component({
     selector: 'jhi-home',

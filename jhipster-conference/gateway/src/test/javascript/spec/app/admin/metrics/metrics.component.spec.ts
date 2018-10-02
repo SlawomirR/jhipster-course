@@ -1,9 +1,10 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { of } from 'rxjs';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {HttpErrorResponse, HttpResponse} from '@angular/common/http';
+import {of, throwError} from 'rxjs';
 
-import { GatewayTestModule } from '../../../test.module';
-import { JhiMetricsMonitoringComponent } from 'app/admin/metrics/metrics.component';
-import { JhiMetricsService } from 'app/admin/metrics/metrics.service';
+import {GatewayTestModule} from '../../../test.module';
+import {JhiMetricsMonitoringComponent} from 'app/admin/metrics/metrics.component';
+import {JhiMetricsService} from 'app/admin/metrics/metrics.service';
 
 describe('Component Tests', () => {
     describe('JhiMetricsMonitoringComponent', () => {
@@ -11,16 +12,14 @@ describe('Component Tests', () => {
         let fixture: ComponentFixture<JhiMetricsMonitoringComponent>;
         let service: JhiMetricsService;
 
-        beforeEach(
-            async(() => {
-                TestBed.configureTestingModule({
-                    imports: [GatewayTestModule],
-                    declarations: [JhiMetricsMonitoringComponent]
-                })
-                    .overrideTemplate(JhiMetricsMonitoringComponent, '')
-                    .compileComponents();
+        beforeEach(async(() => {
+            TestBed.configureTestingModule({
+                imports: [GatewayTestModule],
+                declarations: [JhiMetricsMonitoringComponent]
             })
-        );
+                .overrideTemplate(JhiMetricsMonitoringComponent, '')
+                .compileComponents();
+        }));
 
         beforeEach(() => {
             fixture = TestBed.createComponent(JhiMetricsMonitoringComponent);

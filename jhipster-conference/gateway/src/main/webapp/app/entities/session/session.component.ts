@@ -1,11 +1,11 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
-import { Subscription } from 'rxjs';
-import { JhiAlertService, JhiEventManager } from 'ng-jhipster';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {HttpErrorResponse, HttpResponse} from '@angular/common/http';
+import {Subscription} from 'rxjs';
+import {JhiAlertService, JhiEventManager} from 'ng-jhipster';
 
-import { ISession } from 'app/shared/model/session.model';
-import { Principal } from 'app/core';
-import { SessionService } from './session.service';
+import {ISession} from 'app/shared/model/session.model';
+import {Principal} from 'app/core';
+import {SessionService} from './session.service';
 
 @Component({
     selector: 'jhi-session',

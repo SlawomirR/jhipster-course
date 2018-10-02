@@ -1,7 +1,5 @@
 package io.github.slawomirr.domain;
 
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
@@ -16,7 +14,6 @@ import java.util.Objects;
  */
 @Entity
 @Table(name = "speaker")
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class Speaker implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -46,7 +43,6 @@ public class Speaker implements Serializable {
     private String bio;
 
     @ManyToMany
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     @JoinTable(name = "speaker_sessions",
                joinColumns = @JoinColumn(name = "speakers_id", referencedColumnName = "id"),
                inverseJoinColumns = @JoinColumn(name = "sessions_id", referencedColumnName = "id"))

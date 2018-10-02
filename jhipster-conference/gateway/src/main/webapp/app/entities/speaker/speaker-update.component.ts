@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { JhiAlertService } from 'ng-jhipster';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {HttpErrorResponse, HttpResponse} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {JhiAlertService} from 'ng-jhipster';
 
-import { ISpeaker } from 'app/shared/model/speaker.model';
-import { SpeakerService } from './speaker.service';
-import { ISession } from 'app/shared/model/session.model';
-import { SessionService } from 'app/entities/session';
+import {ISpeaker} from 'app/shared/model/speaker.model';
+import {SpeakerService} from './speaker.service';
+import {ISession} from 'app/shared/model/session.model';
+import {SessionService} from 'app/entities/session';
 
 @Component({
     selector: 'jhi-speaker-update',
